@@ -11,15 +11,15 @@ var controller = {
         db.collection("jazzs").aggregate([
             {$group:{_id: "$banda", count:{$sum:1}}}
         ]).toArray(
-            (error, dataJazz) => {
-                if(error || !dataJazz){
+            (error, dataJazzs) => {
+                if(error || !dataJazzs){
                     return res.status(404).send({
-                        message: "No se encontraron Jazz"
+                        message: "No se encontraron jazz"
                     });
                 }else{
                     return res.status(200).send({
                         status:"success",
-                        JazzReport: dataJazz
+                        JazzReport: dataJazzs
                     });
                 }
             }
