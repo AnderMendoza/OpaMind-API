@@ -1,5 +1,4 @@
 const {MongoClient} = require("mongodb");
-const { response } = require("../app");
 const client = new MongoClient("mongodb+srv://santiago:archipielagoM1@cluster0.ujtyy.mongodb.net/?retryWrites=true&w=majority");
 
 client.connect().then(

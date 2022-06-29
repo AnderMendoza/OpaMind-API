@@ -5,7 +5,7 @@ var mongoose = require('mongoose')
 var app = require('./app')
 
 //puerto servidor
-var port = process.env.port || 3999;
+var port = process.env.PORT || 3999;
 
 //prueba de conexion a la bd
 mongoose.Promise = global.Promise;
